@@ -8,9 +8,9 @@ Here a data acquisition device [LabJack U3](https://labjack.com/products/u3) sat
 
 ![Graphene heater program time-series current curve](Graphene_heater_program_diagram.png)
 
-Typically, an exact time-series current curve is needed to be specified. The above figure shows a time-series current curve I used to grow graphene. In this time-series current curve, the whole curve is divided into events with certain durations. For each event, the current curve is specified by a linear curve with only begin current and end current required. The code "**time-series_current_curve_control.ipynb**" is developed to take two lists **t** and **current**. **t** is a list with all time durations for all events. **current** is a list with all end currents for events (begin currents are not needed because the end current for the event now is the begin current for the next event.).
+Typically, an exact time-series current curve needs to be specified for a heating or cooling process. The above figure shows a time-series current curve I use to grow bilayer graphene on Silicon Carbide. During the growth process, the whole curve is divided into events with certain durations. For each event, the current curve is specified by a linear curve with only initial current and final current required. The code "**time-series_current_curve_control.ipynb**" is developed to take two lists **t** and **current**. **t** is a list with end time points for all events. **current** is a list with all end currents for events (begin currents are not needed because the end current for the event now is the begin current for the next event.).
 
-Also, for many cases, an time-series current curve can contain lots of cycle events (such as cycles events shown in the middle of the schematic figure). "**Graphene_on_SiC_cycles_control.ipynb**" is used to tackle cycles events with number of cycles provided as a part of inputs. 
+Also, for many cases, a time-series current curve can contain lots of cycle events (such as cycles shown in the middle of the schematic figure). "**Graphene_on_SiC_cycles_control.ipynb**" is developed with number of cycles provided as a part of inputs. 
 
 ## Dependencies
 List of dependencies with the versions that were used for the data described on the manuscript:
